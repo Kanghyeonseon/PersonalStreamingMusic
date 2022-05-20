@@ -11,6 +11,9 @@ public class ListService {
 		return dao.Select(bdto);
 		
 	}
+	public boolean Insert(ListDTO bdto) {
+		return dao.Insert(bdto);
+	}
 	
 	
 

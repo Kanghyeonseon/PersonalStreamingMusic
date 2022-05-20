@@ -11,12 +11,12 @@ public class ListController implements SubController
 	@Override
 	public boolean execute(int num, DTO dto) {
 		ListDTO adto  = (ListDTO) dto; //다운캐스팅
-		
 		if(num==1) { 
 			return service.Select(adto);
+		} else if(num==2) {
+			return service.Insert(adto);
 		}
-
-		
 		return false;
 	}
+	
 }
