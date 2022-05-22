@@ -4,16 +4,19 @@ public class ListDTO extends DTO{
 	
 	private String List_Name;
 	private String List_Member_Id;
-	private String List_Index;
 	private String List_Music_Code;
-	public ListDTO(String list_Name, String list_Member_Id, String list_Index, String list_Music_Code) {
+	public ListDTO(String list_Name, String list_Member_Id, String list_Music_Code) {
 		super();
 		List_Name = list_Name;
 		List_Member_Id = list_Member_Id;
-		List_Index = list_Index;
 		List_Music_Code = list_Music_Code;
 	}
 	public ListDTO(String list_Member_Id) {
+		super();
+		List_Member_Id = list_Member_Id;
+	}
+	public ListDTO(String list_Member_Id, String list_Name) {
+		List_Name = list_Name;
 		List_Member_Id = list_Member_Id;
 	}
 	public String getList_Name() {
@@ -27,12 +30,6 @@ public class ListDTO extends DTO{
 	}
 	public void setList_Member_Id(String list_Member_Id) {
 		List_Member_Id = list_Member_Id;
-	}
-	public String getList_Index() {
-		return List_Index;
-	}
-	public void setList_Index(String list_Index) {
-		List_Index = list_Index;
 	}
 	public String getList_Music_Code() {
 		return List_Music_Code;

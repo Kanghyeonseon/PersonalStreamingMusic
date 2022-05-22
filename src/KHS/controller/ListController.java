@@ -15,6 +15,10 @@ public class ListController implements SubController
 			return service.Select(adto);
 		} else if(num==2) {
 			return service.Insert(adto);
+		} else if(num==3) {
+			return service.Delete(adto);
+		} else if(num==4) {
+			return service.SelectList(adto);
 		}
 		return false;
 	}

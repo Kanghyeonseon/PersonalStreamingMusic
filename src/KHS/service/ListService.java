@@ -14,7 +14,12 @@ public class ListService {
 	public boolean Insert(ListDTO bdto) {
 		return dao.Insert(bdto);
 	}
-	
+	public boolean Delete(ListDTO bdto) {
+		return dao.Delete(bdto);
+	}
+	public boolean SelectList(ListDTO bdto) {
+		return dao.SelectList(bdto);
+	}
 	
 
 }
