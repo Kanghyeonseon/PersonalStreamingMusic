@@ -56,8 +56,9 @@ public class ListDAO extends DAO {
 	public boolean SelectList(ListDTO dto) {
 		try {
 			builderMemberList.txtList.setText("");
-			pstmt = conn.prepareStatement("select list_music_code from list_tbl where list_member_id = ?");		
+			pstmt = conn.prepareStatement("select list_music_code from list_tbl where list_member_id = ?");	
 			pstmt.setString(1,dto.getList_Member_Id());
+
 			rs = pstmt.executeQuery();
 			while(rs.next())
 			{
