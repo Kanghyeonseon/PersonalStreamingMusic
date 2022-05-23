@@ -44,10 +44,12 @@ public class builderMember {
 		JLabel lblId = new JLabel(txtId+"님 환영합니다.");
 		lblId.setBounds(47, 30, 205, 15);
 		panel1.add(lblId);
-		textArea.setText("전체재생목록");
+		
+		ListDTO dto = new ListDTO(txtId);
+		boolean r = controller.SubControllerEX("LIST", 1, dto);
 		
 		
-		textArea.setBounds(47, 89, 559, 122);
+		textArea.setBounds(47, 100, 383, 122);
 		panel1.add(textArea);
 		
 		JButton btnSelect = new JButton("내 전체 재생목록조회");
@@ -63,10 +65,10 @@ public class builderMember {
 		});
 		
 		txtName = new JTextField();
-		txtName.setBounds(169, 237, 161, 27);
+		txtName.setBounds(47, 268, 161, 27);
 		panel1.add(txtName);
 		txtName.setColumns(10);
-		btnSelect.setBounds(430, 46, 176, 33);
+		btnSelect.setBounds(47, 57, 176, 33);
 		panel1.add(btnSelect);
 		
 		JButton btnSelectInside = new JButton("재생목록 내부조회");
@@ -76,7 +78,7 @@ public class builderMember {
 				new builderMemberList(txtId, txtName.getText());
 			}
 		});
-		btnSelectInside.setBounds(430, 324, 176, 33);
+		btnSelectInside.setBounds(242, 352, 176, 33);
 		panel1.add(btnSelectInside);
 		
 		JButton btnAdd = new JButton("재생목록추가");
@@ -90,11 +92,11 @@ public class builderMember {
 				
 			}
 		});
-		btnAdd.setBounds(430, 237, 176, 34);
+		btnAdd.setBounds(242, 264, 176, 34);
 		panel1.add(btnAdd);
 		
 		JLabel lblListName_1 = new JLabel("재생목록이름");
-		lblListName_1.setBounds(72, 240, 97, 15);
+		lblListName_1.setBounds(47, 243, 97, 15);
 		panel1.add(lblListName_1);
 		
 		JButton btnDelete = new JButton("재생목록 삭제");
@@ -107,7 +109,7 @@ public class builderMember {
 					else {System.out.println("삭제 실패 ㅋ");}	
 			}
 		});
-		btnDelete.setBounds(430, 281, 176, 33);
+		btnDelete.setBounds(242, 309, 176, 33);
 		panel1.add(btnDelete);
 		frame.setLocationRelativeTo(null);
 		frame.setVisible(true);
